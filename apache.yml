@@ -9,12 +9,6 @@
       name: httpd
       state: started
       enabled: yes
-  - name: Ensure httpd service added to firewalld
-    firewalld:
-           service: httpd
-           state: enabled
-           permanent: yes
-           immediate: yes
   - name: Ensure port 80 added to firewalld
     firewalld:
             port: 80/tcp
